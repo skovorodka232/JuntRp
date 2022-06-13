@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JuntRp | Вебсайт</title>
+    <!-- mc.juntrp.ru -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+    <style>
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body background="images/bg.png">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">JuntRp</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                ><img src="images/home.png" width="22px" />Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/"
+                data-bs-toggle="modal"
+                data-bs-target="#Rules"
+                ><img src="images/rules.png" width="22px" />Правила</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/"
+                data-bs-toggle="modal"
+                data-bs-target="#Sostav"
+                ><img src="images/group.png" width="22px" />Состав</a
+              >
+              <!-- Sostav -->
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://discord.gg/nZ9eXVvyHt"
+                target="_blank"
+                ><img src="images/dc.png" width="22px" />Discord</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="https://vk.com/juntrp"
+                target="_blank"
+                ><img src="images/vk.png" width="22px" />Вконтакте</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="junt">MC.JUNTRP.RU</h1>
+      <h3 class="online">Игроков в сети: <span id="player-count"></span></h3>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        let ip = "mc.juntrp.ru";
+
+        // server playercount
+        $.get("https://mcapi.us/server/status?ip=" + ip, function (res) {
+          if (res.status !== "success") return null;
+          $("#player-count").html(res.players.now);
+        });
+      </script>
+      <div class="container">
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="Rules"
+          tabindex="-1"
+          aria-labelledby="Rules"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Правила</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <b>Основные термины:</b><br />
+                <b>Role-Play (RP)</b> - Игра по ролям, действия которые вы
+                делаете в реальной жизни. <br />
+                <b>OOC</b> - Всё, что касается реального мира. НонРп
+                информация<br />
+                <b> IC</b> - Всё, что касается виртуального мира <br />
+                <b>Green Zone (GZ)</b>- Безопасная зона/зона спавна<br />
+                <br />
+                --------------------------------------------------<br />
+                <br />
+                Правила:<br />
+                <b>NonRp</b> - Неадекватное поведение. Так как бы вы не вели
+                себя в реальной жизни. Наказание - 500 сек ареста <br />
+                <b>FearRp</b> - Небоязнь за свою жизнь. Например: на Вас
+                наставили пистолет но вы всеравно убегаете. Или бить человека
+                битой, при том что у него оружие намного лучше. Наказание 300сек
+                <br />
+                <b>RDM</b> - Беспричинное убийство 1 или 2 человек. Наказание
+                600сек <br />
+                <b>FreeDamage</b> - Запрещено наносить дамаг игроку на 5 или
+                более ХП без причины. Наказание 100сек<br />
+                <b> MassRDM </b>- Беспричинное убийство 3 и более человек.
+                Наказание 1000сек <br />
+                <b>NLR</b> - Запрещено возвращаться на место своей смерти в
+                течение 2ух минут, а также вы обязаны забыть любую информацию из
+                вашей прошлой жизни включая имя/адрес убийцы также запрещено
+                мстить своему убийце. [Исключение: место жительства]. Наказание
+                300сек <br />
+                <b>JobAbuse</b> - Смена профессии с целью получения выгоды.
+                Например: в перестрелке с копами человек взял медика и вылечил
+                своих товарищей. Наказание 400сек<br />
+                <b>FreeArest</b> - Беспричинный арест любого игрока. Наказание
+                300сек <br />
+                <b>FreeWarrant</b> - Беспричинный обыск дома игрока. Наказание
+                300сек <br />
+                <b>MetaGaming </b>- Запрещено использование OOC информацию в IC.
+                Например: Вася сообщил в общий чат, что у него дома 5
+                заложников, а через минут за его дверью собралась вся полиция
+                сервера. Наказание 500сек<br />
+                <b>FreeWanted</b> - Беспричинная подача игрока в розыск.
+                Наказание 300сек <br />
+                <b>GreenZoneAbuse</b> - Использование зоны спавна от ухода от
+                наказания. Например: полицейский Миша догонял Васю, но Вася
+                быстро спрятался в метро где его точно не изобьют. Наказание
+                200сек
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="Sostav"
+          tabindex="-1"
+          aria-labelledby="Sostav"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Состав проекта
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <b>Developer: </b> <br />
+                skovorodka232<br />
+                sogwod <br />
+                <b>Administrator: </b> <br />
+                <b>Support: </b> <br />
+                uker22<br />
+                miraz_<br />
+
+                <b>Trial Support: </b> <br />
+                _Evgen228 <br />
+                Just_Me <br />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Закрыть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- donate -->
+      <button class="donmenu">
+        <div class="donate">
+          <script src="https://api.trademc.org/trademcapi.js"></script>
+          <div id="trademc-buyform"></div>
+          <script>
+            TrademcAPI.GetBuyForm({
+              Shop: "157536",
+              Title: "Купить донат",
+              Nickname: "Введите ваш никнейм",
+              Item: "Выберите товар",
+              Coupon: "Введите купон, если есть",
+              Button: "Продолжить",
+              Success_URL: "https://krenmc.cyou/",
+              Pending_URL: "https://trademc.org",
+              Fail_URL: "https://trademc.org",
+              PastPlaceID: "trademc-buyform",
+            });
+          </script>
+        </div>
+      </button>
+      <div class="order">
+        <a href="/">mc.juntrp.ru</a>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- Site is made by https://ignatka.ml/ specially for ky.krenmc.cyou (and remade for mc.juntrp.ru)-->
