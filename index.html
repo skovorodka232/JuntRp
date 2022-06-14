@@ -27,6 +27,8 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
     <style>
@@ -247,30 +249,128 @@
           </div>
         </div>
       </div>
-      <!-- donate -->
-      <button class="donmenu">
-        <div class="donate">
-          <script src="https://api.trademc.org/trademcapi.js"></script>
-          <div id="trademc-buyform"></div>
-          <script>
-            TrademcAPI.GetBuyForm({
-              Shop: "157536",
-              Title: "Купить донат",
-              Nickname: "Введите ваш никнейм",
-              Item: "Выберите товар",
-              Coupon: "Введите купон, если есть",
-              Button: "Продолжить",
-              Success_URL: "https://krenmc.cyou/",
-              Pending_URL: "https://trademc.org",
-              Fail_URL: "https://trademc.org",
-              PastPlaceID: "trademc-buyform",
-            });
-          </script>
+      <div class="container">
+        <div class="don">
+          <div>
+            <h2 class="trademc-buyform-title">Купить донат</h2>
+            <button
+              class="don-small"
+              data-bs-toggle="modal"
+              data-bs-target="#TradeMc"
+            >
+              Через <b>TradeMc</b
+              ><img src="images/trademc.png" width="20" /><br />
+              <p><b>(С комиссией, приходит сразу)</b></p>
+            </button>
+            <button
+              class="don-small"
+              data-bs-toggle="modal"
+              data-bs-target="#Direct"
+            >
+              Напрямую<img src="images/sber.png" width="22" /><img
+                src="images/tinkoff.png"
+                width="22"
+              />
+              <br />
+              <p><b>(Без комиссии, приходит в течение 24ч</b>)</p>
+            </button>
+          </div>
         </div>
-      </button>
-      <div class="order">
-        <a href="/">mc.juntrp.ru</a>
       </div>
+      <div class="trade">
+        <div
+          class="modal fade"
+          id="TradeMc"
+          tabindex="-1"
+          aria-labelledby="TradeMc"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Покупка через TradeMc
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <button class="donmenu">
+                  <div class="donate">
+                    <script src="https://api.trademc.org/trademcapi.js"></script>
+                    <div id="trademc-buyform"></div>
+                    <script>
+                      TrademcAPI.GetBuyForm({
+                        Shop: "157536",
+                        Title: "Купить донат",
+                        Nickname: "Введите ваш никнейм",
+                        Item: "Выберите товар",
+                        Coupon: "Введите купон, если есть",
+                        Button: "Продолжить",
+                        Success_URL: "https://krenmc.cyou/",
+                        Pending_URL: "https://trademc.org",
+                        Fail_URL: "https://trademc.org",
+                        PastPlaceID: "trademc-buyform",
+                      });
+                    </script>
+                  </div>
+                </button>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Напрямую - окно -->
+      <div class="trade ru">
+        <div
+          class="modal fade"
+          id="Direct"
+          tabindex="-1"
+          aria-labelledby="Direct"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Купить напрямую
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <b>Покупка напрямую происходит следующим образом:</b> <br />
+                1) Вы скидываете деньги на карту (Реквизиты в конце) <br />
+                2) В сообщении отправки денег пишите свой ник и тип доната
+                (Vip/JC) <br />
+                3) Если оплата прошла успешно администратор выдаст вам донат в
+                течение 24ч<br />
+                <br />
+                <b>Реквизиты:</b><br />
+                <br />
+                <div class="direct">
+                  Сбербанк:
+                  <b> 5336690346041603 </b>
+                  <br /><br />
+                  Тинькофф:<b> 4377727814740614</b><br />
+                </div>
+                Пожалуйста сохраняйте чек!
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- donate -->
     </div>
   </body>
 </html>
