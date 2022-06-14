@@ -125,6 +125,107 @@ h3 {
   background-color: rgb(165, 165, 165, 0) !important;
 }
 
+.don {
+  margin-top: 2%;
+  text-align: center;
+  /* font-family: "Montserrat", sans-serif;*/
+  font-family: "Dosis", sans-serif;
+  border-radius: 30px 30px;
+  border-width: 2px;
+  border-style: solid;
+  width: calc(50% + 130px);
+  color: rgb(0, 0, 0) !important;
+  border-color: rgb(165, 165, 165) !important;
+  transition: 0.3s;
+  background-color: rgb(165, 165, 165, 0) !important;
+}
+
+.don-small {
+  /* font-family: "Montserrat", sans-serif;*/
+  margin-top: -1.2%;
+  font-family: "Dosis", sans-serif;
+  font-size: 150%;
+  border-radius: 10px 10px;
+  margin-bottom: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-width: 0px;
+  border-style: solid;
+  width: calc(45%);
+  color: rgb(13, 13, 13) !important;
+  border-color: rgb(165, 165, 165) !important;
+  transition: 0.3s;
+  background-color: rgb(228, 228, 228) !important;
+}
+
+.direct {
+  /* font-family: "Montserrat", sans-serif;*/
+  font-family: "Dosis", sans-serif;
+  font-size: 150%;
+  border-radius: 10px 10px;
+  margin-bottom: 3%;
+  margin-left: 20%;
+  border-width: 0px;
+  border-style: solid;
+  width: calc(60%);
+  color: rgb(13, 13, 13) !important;
+  border-color: rgb(165, 165, 165) !important;
+  transition: 0.3s;
+  background-color: rgb(228, 228, 228) !important;
+}
+
+.direct button {
+  background-color: rgba(255, 255, 255, 0);
+  border-width: 0;
+  border-radius: 60px 60px;
+}
+
+.direct input {
+  margin-top: 1%;
+}
+
+.direct button:hover {
+  background-color: rgb(179, 179, 179) !important;
+}
+
+.direct img {
+  margin-bottom: 25%;
+}
+
+.don-small:hover {
+  background-color: rgb(176, 176, 176) !important;
+}
+
+.don-small p {
+  font-size: 65%;
+  color: black;
+}
+
+.trade .modal-content {
+  background-color: rgba(160, 160, 160, 0.633);
+  border-width: 0px;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.ru {
+  color: rgb(255, 255, 255) !important;
+}
+
+.trade .modal-header {
+  color: white;
+}
+
+.trade .btn-close {
+  border-color: white;
+  background-color: white !important;
+}
+
+.don-small img {
+  margin-bottom: 1%;
+  margin-left: 1%;
+}
+
 .donmenu button {
   color: rgb(0, 0, 0);
   border-color: rgb(174, 174, 174);
